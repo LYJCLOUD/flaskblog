@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, request, g
+from flask import render_template, flash, redirect, url_for, request, g, jsonify
 from app import app, db
 from app.form import LoginForm, RegistrationForm, EditProfileForm, PostForm, ResetPasswordRequestForm
 from flask_login import current_user, login_user, logout_user, login_required
@@ -8,6 +8,10 @@ from datetime import datetime
 from app.email import send_password_reset_email
 from flask_babel import get_locale, _
 from guess_language import guess_language
+from app.translate import translate
+
+
+
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -83,7 +87,14 @@ def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
-    g.locale = 'zh_CN'
+    g.locale = 'zh' if str(get_locale()).startswith('zh') else str(get_locale())
+#...
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+    return jsonify({'text': translate(request.form['text'],request.form['source_language'],request.form['dest_language'])})
+
+
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():

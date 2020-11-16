@@ -1,4 +1,4 @@
-from app import db, login, app
+from app import db, login, app, cli
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
@@ -6,6 +6,7 @@ from hashlib import md5
 from flask_login import UserMixin
 from time import time
 import jwt
+
 
 @login.user_loader
 def load_user(id):

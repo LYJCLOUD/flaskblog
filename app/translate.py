@@ -3,7 +3,7 @@ from flask_babel import _
 from app import app
 from urllib import parse
 
-def translate(q, fromLang, to Lang):
+def translate(q, fromLang, toLang):
     if 'APPID' not in app.config or not app.config['APPID']:
         return _('Error: the translation service is not configured.')
     if 'BD_TRANSLATOR_KEY' not in app.config or not app.config['BD_TRANSLATOR_KEY']:
