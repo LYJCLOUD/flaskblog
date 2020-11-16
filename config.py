@@ -26,3 +26,5 @@ class Config(object):
     LANGUAGES = ['en', 'zh']
     APPID = os.environ.get('22988310')
     MS_TRANSLATOR_KEY = os.environ.get('T1GOo87eWxiZCa0UDxl8vHWv')
+   
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
