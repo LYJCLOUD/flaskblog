@@ -82,6 +82,7 @@ class User(db.Model, UserMixin):
 
 
 class Post(db.Model):
+    language = db.Column(db.String(5))
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)

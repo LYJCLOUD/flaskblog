@@ -24,3 +24,5 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')#客户端授权密码
 
     LANGUAGES = ['en', 'zh']
+    APPID = os.environ.get('22988310')
+    MS_TRANSLATOR_KEY = os.environ.get('T1GOo87eWxiZCa0UDxl8vHWv')

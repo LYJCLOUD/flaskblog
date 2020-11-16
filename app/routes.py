@@ -6,16 +6,19 @@ from app.models import User, Post
 from werkzeug.urls import url_parse
 from datetime import datetime
 from app.email import send_password_reset_email
-from flask_babel import get_locale
+from flask_babel import get_locale, _
+from guess_language import guess_language
 
-
-@app.route('/')
-@app.route('/index')
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(body=form.post.data, author=current_user)
+        language = guess_language(form.post.data)
+        if language == 'UNKNOWN' or len(language) > 5:
+            language = ''
+        post = Post(body=form.post.data, author=current_user, language=language)
         db.session.add(post)
         db.session.commit()
         flash('Your post is now live!')
