@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-11-16 13:43+0800\n"
+"POT-Creation-Date: 2020-11-16 13:51+0800\n"
 "PO-Revision-Date: 2020-11-16 13:39+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "%(username)s said %(when)s"
 msgstr ""
 
-#: app/templates/_post.html:22
+#: app/templates/_post.html:20
 msgid "Translate"
 msgstr ""
 

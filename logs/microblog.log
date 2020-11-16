@@ -69,3 +69,6 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password_re
 2020-11-16 13:32:33,875 INFO: Microblog startup [in /root/flaskblog/app/__init__.py:45]
 2020-11-16 13:43:39,752 INFO: Microblog startup [in /root/flaskblog/app/__init__.py:45]
 2020-11-16 13:43:47,887 INFO: Microblog startup [in /root/flaskblog/app/__init__.py:45]
+2020-11-16 13:49:10,482 INFO: Microblog startup [in /root/flaskblog/app/__init__.py:45]
+2020-11-16 13:51:58,573 INFO: Microblog startup [in /root/flaskblog/app/__init__.py:45]
+2020-11-16 13:52:04,563 INFO: Microblog startup [in /root/flaskblog/app/__init__.py:45]
