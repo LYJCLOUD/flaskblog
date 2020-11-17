@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-11-16 13:51+0800\n"
+"POT-Creation-Date: 2020-11-16 15:42+0800\n"
 "PO-Revision-Date: 2020-11-16 13:39+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -22,6 +22,10 @@ msgstr ""
 msgid "Please log in to access this page."
 msgstr ""
 
+#: app/forms.py:64 app/main/forms.py:9 app/main/routes.py:26
+msgid "Search"
+msgstr ""
+
 #: app/routes.py:120
 #, python-format
 msgid "User %(username)s not found."
@@ -31,20 +35,90 @@ msgstr ""
 msgid "Error: the translation service is not configured."
 msgstr ""
 
+#: app/main/forms.py:19
+msgid "Message"
+msgstr ""
+
+#: app/main/forms.py:21
+msgid "Submit"
+msgstr ""
+
+#: app/main/routes.py:45
+msgid "Your message has been sent."
+msgstr ""
+
+#: app/main/routes.py:47
+msgid "Send Message"
+msgstr ""
+
 #: app/templates/404.html:4
 msgid "File Not Found"
 msgstr ""
 
-#: app/templates/_post.html:14
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr ""
 
-#: app/templates/_post.html:20
+#: app/templates/_post.html:22
 msgid "Translate"
 msgstr ""
 
-#: app/templates/base.html:71
-msgid "Error:Could not contact server."
+#: app/templates/messages.html:4
+msgid "Messages"
 msgstr ""
+
+#: app/templates/messages.html:12
+msgid "Newer messages"
+msgstr ""
+
+#: app/templates/messages.html:17
+msgid "Older messages"
+msgstr ""
+
+#: app/templates/search.html:4
+msgid "Search Results"
+msgstr ""
+
+#: app/templates/search.html:13
+msgid "Previous results"
+msgstr ""
+
+#: app/templates/search.html:18
+msgid "Next results"
+msgstr ""
+
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr ""
+
+#: app/templates/user.html:36
+msgid "Send private message"
+msgstr ""
+
+#: app/templates/user_popup.html:13
+msgid "Last seen on"
+msgstr ""
+
+#: app/templates/user_popup.html:16
+#, python-format
+msgid "%(count)d followers"
+msgstr ""
+
+#: app/templates/user_popup.html:17
+#, python-format
+msgid "%(count)d following"
+msgstr ""
+
+#: app/templates/user_popup.html:21
+msgid "Follow"
+msgstr ""
+
+#: app/templates/user_popup.html:25
+msgid "Unfollow"
+msgstr ""
+
+#~ msgid "Error:Could not contact server."
+#~ msgstr ""
 
